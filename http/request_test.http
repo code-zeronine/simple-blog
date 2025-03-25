@@ -1,0 +1,11 @@
+### Health Check API 테스트
+GET http://localhost:9000/health
+
+Content-Type: application/json
+
+
+###
+# curl -X GET --location "http://localhost:9000/members"
+GET http://localhost:9000/members
+
+
