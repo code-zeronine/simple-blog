@@ -4,6 +4,7 @@ import com.hksim.simpleBlog.domain.member.MemberReq
 import com.hksim.simpleBlog.domain.member.toDto
 import com.hksim.simpleBlog.service.MemberService
 import com.hksim.simpleBlog.util.value.CmResDto
+import jakarta.validation.Valid
 import org.springframework.data.domain.Pageable
 import org.springframework.data.web.PageableDefault
 import org.springframework.http.HttpStatus
@@ -30,7 +31,7 @@ class MemberController(
         CmResDto(HttpStatus.OK, "delete member by id", memberService.deleteMemberById(id))
 
     @PostMapping("/member")
-    fun save(@RequestBody dto: MemberReq): CmResDto<*> =
+    fun save(@Valid @RequestBody dto: MemberReq): CmResDto<*> =
         CmResDto(HttpStatus.OK, "register member", memberService.saveMember(dto))
 }
 

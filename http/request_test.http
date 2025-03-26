@@ -19,7 +19,6 @@ POST {{root-path}}/member
 Content-Type: application/json
 
 {
-  "email": "email_7f6c8ac6feea",
   "password": "password_6cb9b6655b6c",
   "role": "ADMIN"
 }
