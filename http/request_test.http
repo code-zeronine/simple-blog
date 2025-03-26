@@ -1,11 +1,29 @@
 ### Health Check API 테스트
-GET http://localhost:9000/health
+GET {{root-path}}/health
 
+
+### 전체 Member 조회
+GET {{root-path}}/members
+
+
+### 전체 Post 조회
+GET {{root-path}}/posts
+
+
+### 특정 Member 조회
+GET {{root-path}}/members/filter?filter=pr&count=2
+
+
+### Member 등록
+POST {{root-path}}/member
 Content-Type: application/json
 
+{
+  "email": "email_7f6c8ac6feea",
+  "password": "password_6cb9b6655b6c",
+  "role": "ADMIN"
+}
 
-###
-# curl -X GET --location "http://localhost:9000/members"
-GET http://localhost:9000/members
 
-
+### Member 조회
+GET {{root-path}}/member/202

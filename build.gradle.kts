@@ -40,10 +40,14 @@ dependencies {
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("io.github.serpro69:kotlin-faker:2.0.0-rc.9")
+    implementation("io.github.serpro69:kotlin-faker:1.16.0")
     implementation("io.github.oshai:kotlin-logging:7.0.5")
 
     implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.10.0")
+
+    implementation("com.linecorp.kotlin-jdsl:jpql-dsl:3.5.5")
+    implementation("com.linecorp.kotlin-jdsl:jpql-render:3.5.5")
+    implementation("com.linecorp.kotlin-jdsl:spring-data-jpa-support:3.5.5")
 
     runtimeOnly("com.h2database:h2")
     runtimeOnly("org.postgresql:postgresql")

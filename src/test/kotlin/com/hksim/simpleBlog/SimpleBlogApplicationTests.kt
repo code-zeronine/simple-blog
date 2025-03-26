@@ -1,4 +1,4 @@
-package com.hksim.simple_blog
+package com.hksim.simpleBlog
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

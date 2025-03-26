@@ -1,4 +1,4 @@
-package com.hksim.simple_blog.domain
+package com.hksim.simpleBlog.domain
 
 import jakarta.persistence.*
 import org.springframework.data.annotation.CreatedDate

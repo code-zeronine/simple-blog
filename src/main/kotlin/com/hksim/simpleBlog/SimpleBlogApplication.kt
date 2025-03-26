@@ -1,4 +1,4 @@
-package com.hksim.simple_blog
+package com.hksim.simpleBlog
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

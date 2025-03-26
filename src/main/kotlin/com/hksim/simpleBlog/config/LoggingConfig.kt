@@ -1,4 +1,4 @@
-package com.hksim.simple_blog.config
+package com.hksim.simpleBlog.config
 
 import com.p6spy.engine.logging.Category
 import com.p6spy.engine.spy.P6SpyOptions
@@ -45,9 +45,9 @@ class P6spyPrettySqlFormatter : MessageFormattingStrategy {
         if (Category.STATEMENT.name.equals(category)) {
             val tmplSql = sql.trim { it.isWhitespace() }.lowercase()
             resultSql = if (tmplSql.startsWith("create") || tmplSql.startsWith("alter") || tmplSql.startsWith("comment")) {
-                FormatStyle.DDL.formatter.format(tmplSql)
+                FormatStyle.DDL.formatter.format(resultSql)
             } else {
-                FormatStyle.BASIC.formatter.format(tmplSql)
+                FormatStyle.BASIC.formatter.format(resultSql)
             }
             resultSql = "|\nHeFormatSql(P6Spy sql, Hibernate format): $resultSql"
         }

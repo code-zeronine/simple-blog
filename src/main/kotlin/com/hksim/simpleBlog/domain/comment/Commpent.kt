@@ -1,7 +1,7 @@
-package com.hksim.simple_blog.domain.comment
+package com.hksim.simpleBlog.domain.comment
 
-import com.hksim.simple_blog.domain.AuditingEntity
-import com.hksim.simple_blog.domain.post.Post
+import com.hksim.simpleBlog.domain.AuditingEntity
+import com.hksim.simpleBlog.domain.post.Post
 import jakarta.persistence.*
 
 @Entity
