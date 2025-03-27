@@ -14,7 +14,7 @@ class PostService(
     fun findPosts(pageable: Pageable): Page<PostRes> = postRepository.findPosts(pageable).map { it?.toDto() }
 
     @Transactional
-    fun savePost(dto: PostReq): Post = postRepository.save(dto.toEntity())
+    fun savePost(dto: PostReq): PostRes = postRepository.save(dto.toEntity()).toDto()
 
     @Transactional
     fun deletePostById(id: Long) = postRepository.deleteById(id)

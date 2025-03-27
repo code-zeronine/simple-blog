@@ -10,6 +10,7 @@ class Member(
     password: String,
     role: Role
 ) : AuditingEntity() {
+
     @Column(name = "email", nullable = false)
     var email: String = email
         protected set
@@ -23,9 +24,7 @@ class Member(
     var role: Role = role
         protected set
 
-    override fun toString(): String {
-        return "Member(email='$email', password='$password', role=$role)"
-    }
+    override fun toString(): String = "Member(email='$email', password='$password', role=$role)"
 
     companion object {
         fun createFakeMember(memberId: Long): Member {
@@ -34,16 +33,10 @@ class Member(
             return member
         }
     }
+
 }
 
-fun Member.toDto(): MemberRes {
-   return MemberRes(
-       id = this.id!!,
-       email = this.email,
-       password = this.password,
-       role = this.role,
-   )
-}
+fun Member.toDto(): MemberRes = MemberRes(id!!, email, password, role)
 
 enum class Role {
     ADMIN,

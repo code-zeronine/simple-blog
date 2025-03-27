@@ -26,7 +26,7 @@ Content-Type: application/json
 
 
 ### Member 조회
-GET {{root-path}}/member/202
+GET {{root-path}}/member/101
 
 
 ### Post 등록
@@ -34,7 +34,13 @@ POST {{root-path}}/post
 Content-Type: application/json
 
 {
-  "title": "title00012",
   "content": "content00012",
-  "memberId": 12
+  "memberId": 14
 }
+
+### Post 조회
+GET {{root-path}}/post/101
+
+
+### Post 삭제
+DELETE {{root-path}}/post/101

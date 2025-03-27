@@ -15,7 +15,7 @@ data class MemberReq(
     val role: Role?
 )
 
-fun MemberReq.toEntity() = Member(email ?: "", password ?: "", role ?: Role.USER)
+fun MemberReq.toEntity(): Member = Member(email ?: "", password ?: "", role ?: Role.USER)
 
 data class MemberRes(
     val id: Long,

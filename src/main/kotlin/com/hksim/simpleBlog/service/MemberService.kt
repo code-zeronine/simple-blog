@@ -17,7 +17,7 @@ class MemberService(
     fun getByFilter(filter: String, count: Int): List<Member> = memberRepository.findByFilter(filter, count)
 
     @Transactional
-    fun saveMember(dto: MemberReq): Member = memberRepository.save(dto.toEntity())
+    fun saveMember(dto: MemberReq): MemberRes = memberRepository.save(dto.toEntity()).toDto()
 
     @Transactional
     fun deleteMemberById(id: Long) = memberRepository.deleteById(id)

@@ -12,7 +12,7 @@ data class PostReq(
     val memberId: Long?
 )
 
-fun PostReq.toEntity() = Post(title ?: "", content ?: "", Member.createFakeMember(memberId!!))
+fun PostReq.toEntity(): Post = Post(title ?: "", content ?: "", Member.createFakeMember(memberId!!))
 
 data class PostRes(
     val id: Long,
