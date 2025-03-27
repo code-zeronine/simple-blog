@@ -14,6 +14,7 @@ interface CustomPostRepository {
 class CustomPostRepositoryImpl(
     private val jpqlExecutor: KotlinJdslJpqlExecutor
 ) : CustomPostRepository {
+
     override fun findPosts(pageable: Pageable): Page<Post?> {
         return jpqlExecutor.findPage(pageable) {
             select(entity(Post::class))
@@ -21,4 +22,5 @@ class CustomPostRepositoryImpl(
                 .orderBy(path(Post::id).desc())
         }
     }
+
 }

@@ -3,6 +3,7 @@ package com.hksim.simpleBlog.api
 import com.hksim.simpleBlog.domain.post.PostReq
 import com.hksim.simpleBlog.service.PostService
 import com.hksim.simpleBlog.util.value.CmResDto
+import jakarta.validation.Valid
 import org.springframework.data.domain.Pageable
 import org.springframework.data.web.PageableDefault
 import org.springframework.http.HttpStatus
@@ -18,13 +19,13 @@ class PostController(
 
     @GetMapping("/post/{id}")
     fun findMemberById(@PathVariable id: Long): CmResDto<*> =
-        CmResDto(HttpStatus.OK, "find member by id", postService.findPostById(id))
+        CmResDto(HttpStatus.OK, "find post by id", postService.findPostById(id))
 
     @DeleteMapping("/post/{id}")
     fun deleteMemberById(@PathVariable id: Long): CmResDto<*> =
-        CmResDto(HttpStatus.OK, "delete member by id", postService.deletePostById(id))
+        CmResDto(HttpStatus.OK, "delete post by id", postService.deletePostById(id))
 
     @PostMapping("/post")
-    fun save(@RequestBody dto: PostReq): CmResDto<*> =
-        CmResDto(HttpStatus.OK, "register member", postService.savePost(dto))
+    fun save(@Valid @RequestBody dto: PostReq): CmResDto<*> =
+        CmResDto(HttpStatus.OK, "register post", postService.savePost(dto))
 }

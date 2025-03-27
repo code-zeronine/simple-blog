@@ -6,7 +6,7 @@ import jakarta.persistence.*
 
 @Entity
 @Table(name = "Comment")
-class Commpent(
+class Comment(
     content: String,
     post: Post,
 ) : AuditingEntity() {

@@ -19,6 +19,7 @@ POST {{root-path}}/member
 Content-Type: application/json
 
 {
+  "email": "email_test01@test.co.kr",
   "password": "password_6cb9b6655b6c",
   "role": "ADMIN"
 }
@@ -26,3 +27,14 @@ Content-Type: application/json
 
 ### Member 조회
 GET {{root-path}}/member/202
+
+
+### Post 등록
+POST {{root-path}}/post
+Content-Type: application/json
+
+{
+  "title": "title00012",
+  "content": "content00012",
+  "memberId": 12
+}

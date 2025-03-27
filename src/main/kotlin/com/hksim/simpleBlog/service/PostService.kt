@@ -21,5 +21,5 @@ class PostService(
 
     @Transactional
     fun findPostById(id: Long): PostRes =
-        postRepository.findById(id).orElseThrow { throw RuntimeException("Member not found") }.toDto()
+        postRepository.findById(id).orElseThrow { throw RuntimeException("Post not found") }.toDto()
 }
